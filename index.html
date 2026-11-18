@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SkillSwap – Trade skills, not money</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to main content</a>
+<header class="site-header"><div class="wrap bar">
+  <a class="brand" href="#share"><img src="logo.svg" alt="" width="40" height="40"><span>SkillSwap</span></a>
+  <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main"><ul>
+    <li><a href="#share">Skill Share</a></li><li><a href="#skills">My Skills</a></li>
+    <li><a href="#swap">Swap &amp; Learn</a></li><li><a href="#works">Share Your Works</a></li>
+  </ul></nav>
+</div></header>
+
+<main id="content" tabindex="-1"><div class="wrap">
+
+<!-- PAGE 1 -->
+<section id="share" aria-labelledby="h-share">
+  <div class="hero">
+    <div>
+      <h1 id="h-share">Trade skills, not money.</h1>
+      <p class="lead">Teach what you know, learn what you need. An hour of coding help for an hour of gardening or language practice.</p>
+      <p class="actions"><a class="btn" href="#swap">Find a swap</a> <a class="btn alt" href="#skills">List my skills</a></p>
+    </div>
+    <svg class="art" viewBox="0 0 400 320" role="img" aria-label="Two neighbors trading an hour of coding for an hour of gardening">
+      <rect width="400" height="320" rx="28" fill="#E3EEEC"/>
+      <circle cx="105" cy="105" r="34" fill="#0F5C5C"/><path d="M50 215a55 55 0 0 1 110 0z" fill="#0F5C5C"/>
+      <circle cx="295" cy="105" r="34" fill="#F2A33A"/><path d="M240 215a55 55 0 0 1 110 0z" fill="#F2A33A"/>
+      <rect x="62" y="228" width="86" height="44" rx="12" fill="#fff" stroke="#0F5C5C" stroke-width="3"/><text x="105" y="256" text-anchor="middle" font-size="16" font-weight="700" fill="#22282A">&lt;/&gt; Code</text>
+      <rect x="252" y="228" width="86" height="44" rx="12" fill="#fff" stroke="#F2A33A" stroke-width="3"/><text x="295" y="256" text-anchor="middle" font-size="16" font-weight="700" fill="#22282A">Garden</text>
+      <path d="M150 70q50-36 100 0" fill="none" stroke="#22282A" stroke-width="4" stroke-linecap="round"/><polygon points="252,62 240,54 238,72" fill="#22282A"/>
+      <path d="M250 150q-50 34-100 0" fill="none" stroke="#22282A" stroke-width="4" stroke-linecap="round"/><polygon points="148,142 160,134 162,152" fill="#22282A"/>
+      <text x="200" y="104" text-anchor="middle" font-size="26" font-weight="800" fill="#0F5C5C">1 hr</text>
+    </svg>
+  </div>
+
+  <h2>Skills people are sharing</h2>
+  <ul class="grid" id="cats"></ul>
+
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><strong>List</strong> what you can teach and want to learn.</li>
+    <li><strong>Swap</strong> with a neighbor: 1 hour = 1 time credit.</li>
+    <li><strong>Share</strong> what you made and get feedback.</li>
+  </ol>
+
+  <details>
+    <summary>Design notes: audience, color scheme, HCI, references</summary>
+    <h3>Target audience</h3>
+    <p>Adults 18–45 in the same neighborhood or town: students and early-career workers who want experience and portfolio pieces, parents and hobbyists with practical skills, and people on tight budgets. Mixed digital confidence, mostly on phones. This is why every page has plain language, large touch targets, and a short path to “list a skill.”</p>
+    <h3>Color scheme</h3>
+    <p>Deep teal (trust, calm), warm amber (friendliness, call to action), off-white background, charcoal text. Pairs are chosen to meet WCAG 2.2 AA (4.5:1) and color is never the only signal: statuses and levels are always written out.</p>
+    <h3>HCI principles</h3>
+    <p><strong>Sustainability:</strong> reuses local skills, light pages. <strong>Efficiency:</strong> short forms, few steps, balance and next step always visible. <strong>Resilience:</strong> readable on slow networks, plain HTML first, phone/SMS contact.</p>
+    <h3>References (APA 7)</h3>
+    <p class="ref">Cahn, E. S. (2000). <em>No more throw-away people: The co-production imperative</em>. Essential Books.</p>
+    <p class="ref">Nielsen, J. (1994, April 24). <em>10 usability heuristics for user interface design</em>. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/</p>
+    <p class="ref">Seyfang, G. (2002). Tackling social exclusion with community currencies: Learning from LETS to time banks. <em>International Journal of Community Currency Research, 6</em>.</p>
+    <p class="ref">World Wide Web Consortium. (2023). <em>Web content accessibility guidelines (WCAG) 2.2</em>. https://www.w3.org/TR/WCAG22/</p>
+  </details>
+</section>
+
+<!-- PAGE 2 -->
+<section id="skills" aria-labelledby="h-skills" hidden>
+  <h1 id="h-skills">My skills</h1>
+  <p class="profile"><span class="avatar" aria-hidden="true">YN</span> <span>Your Name · Indang, Cavite · <strong><span class="cr">3</span> time credits</strong></span></p>
+  <div class="two">
+    <div>
+      <h2 class="first">Skills I can teach</h2>
+      <ul class="stack" id="teach"></ul>
+      <h2>Skills I want to learn</h2>
+      <ul class="stack" id="learn"></ul>
+    </div>
+    <div class="panel">
+      <h2 class="first">Add a skill</h2>
+      <form id="addform">
+        <fieldset><legend>This skill is…</legend>
+          <label><input type="radio" name="k" value="teach" checked> One I can teach</label>
+          <label><input type="radio" name="k" value="learn"> One I want to learn</label>
+        </fieldset>
+        <div><label for="sn">Skill name</label><input id="sn" required></div>
+        <div><label for="lv">Level</label><select id="lv"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select><span class="hint">Only used for skills you teach.</span></div>
+        <div><label for="av">Availability</label><select id="av"><option>Weekday evenings</option><option>Weekends</option><option>Flexible</option></select></div>
+        <button class="btn" type="submit">Add to my list</button>
+        <p id="m1" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section id="swap" aria-labelledby="h-swap" hidden>
+  <h1 id="h-swap">Swap &amp; learn</h1>
+  <div class="card credit">
+    <div><strong>Your time credits: <span class="cr">3</span></strong><div class="hint">1 hour taught = 1 credit earned. 1 hour learned = 1 credit spent.</div></div>
+    <div class="meter" role="img" aria-label="Credit balance"><span id="meter"></span></div>
+  </div>
+  <h2>Suggested matches</h2>
+  <ul class="grid" id="matches"></ul>
+  <h2>Propose a session</h2>
+  <form id="swapform" class="narrow">
+    <div><label for="wh">With</label><input id="wh" readonly placeholder="Choose a match above"></div>
+    <div><label for="dt">Preferred date and time</label><input id="dt" type="datetime-local" required></div>
+    <div><label for="pl">Place</label><select id="pl"><option>Public library</option><option>Community center</option><option>Online call</option></select><span class="hint">Meeting in public places or online keeps everyone safe.</span></div>
+    <div><label for="ms">Short message</label><textarea id="ms" rows="3"></textarea></div>
+    <button class="btn" type="submit">Send request</button>
+    <p id="m2" role="status" aria-live="polite"></p>
+  </form>
+  <h2>My sessions</h2>
+  <div class="wrapx"><table><thead><tr><th scope="col">With</th><th scope="col">Skill</th><th scope="col">When</th><th scope="col">Status</th></tr></thead><tbody id="sessions"></tbody></table></div>
+</section>
+
+<!-- PAGE 4 -->
+<section id="works" aria-labelledby="h-works" hidden>
+  <h1 id="h-works">Share your works</h1>
+  <p class="lead">Show what you made while learning or teaching, and get friendly feedback from the community.</p>
+  <p><a class="btn" href="#upload" id="newwork">+ Share a new work</a></p>
+  <h2>Community gallery</h2>
+  <ul class="grid" id="gallery"></ul>
+  <h2 id="upload">Upload a work</h2>
+  <form id="workform" class="narrow">
+    <div><label for="wt">Title</label><input id="wt" required></div>
+    <div><label for="ws">Skill this shows</label><select id="ws"></select><span class="hint">Choices come from My Skills.</span></div>
+    <div><label for="wf">Photo or file</label><input id="wf" type="file" accept="image/*"></div>
+    <div><label for="wa">Image description (alt text)</label><input id="wa"><span class="hint">Helps people using screen readers.</span></div>
+    <div><label for="wd">What did you make or learn?</label><textarea id="wd" rows="3"></textarea></div>
+    <button class="btn" type="submit">Share</button>
+    <p id="m3" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+</div></main>
+<footer><div class="wrap foot"><img src="logo.svg" alt="" width="28" height="28"><span>SkillSwap · Pataray · BSCS</span></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
